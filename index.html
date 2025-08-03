@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fitness Tracker Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🏋 Fitness Tracker Dashboard</h1>
+  </header>
+
+  <main>
+    <!-- Activity Input Form -->
+    <section class="form-section">
+      <h2>Log Your Activity</h2>
+      <form id="activityForm">
+        <label>Activity:
+          <select id="activityType">
+            <option value="Running">Running</option>
+            <option value="Cycling">Cycling</option>
+            <option value="Walking">Walking</option>
+          </select>
+        </label>
+        <label>Duration (mins): <input type="number" id="duration" required /></label>
+        <label>Distance (km): <input type="number" id="distance" required /></label>
+        <button type="submit">Add Activity</button>
+      </form>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section">
+      <h2>Statistics</h2>
+      <p>Total Distance: <span id="totalDistance">0</span> km</p>
+      <p>Total Duration: <span id="totalDuration">0</span> mins</p>
+      <p>Total Calories Burned: <span id="totalCalories">0</span> kcal</p>
+    </section>
+
+    <!-- Recommendations -->
+    <section class="recommendations">
+      <h2>Workout Recommendation</h2>
+      <p id="recommendationText">Log some data to get suggestions!</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
