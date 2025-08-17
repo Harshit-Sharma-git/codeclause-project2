@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Sweet Crumbs Bakery</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="icon" href="favicon.ico" />
+</head>
+<body>
+	<header class="site-header">
+		<nav class="navbar container">
+			<a href="#" class="logo">Sweet<span>Crumbs</span></a>
+			<input type="checkbox" id="nav-toggle" class="nav-toggle" />
+			<label for="nav-toggle" class="nav-toggle-label" aria-label="Open Menu"><span></span></label>
+			<ul class="nav-links">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#menu">Menu</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#gallery">Gallery</a></li>
+				<li><a href="#testimonials">Testimonials</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section id="home" class="hero">
+			<div class="container hero-content">
+				<h1>Freshly Baked Happiness</h1>
+				<p>Artisan breads, delicate pastries, and custom cakes baked daily with love.</p>
+				<a href="#menu" class="btn btn-primary">Explore Menu</a>
+			</div>
+		</section>
+
+		<section id="menu" class="section container">
+			<header class="section-header">
+				<h2>Our Bestsellers</h2>
+				<p>Handpicked favorites our customers adore.</p>
+			</header>
+			<div class="cards-grid">
+				<article class="card">
+					<img src="https://images.unsplash.com/photo-1541782814453-c6e04c2b5b97?q=80&w=1200&auto=format&fit=crop" alt="Sourdough Bread" />
+					<div class="card-body">
+						<h3>Sourdough Loaf</h3>
+						<p>Crusty outside, airy inside. Naturally leavened for 24 hours.</p>
+						<div class="price-row"><span>$6.50</span><a href="#contact" class="btn btn-ghost">Order</a></div>
+					</div>
+				</article>
+				<article class="card">
+					<img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?q=80&w=1200&auto=format&fit=crop" alt="Croissants" />
+					<div class="card-body">
+						<h3>Butter Croissants</h3>
+						<p>Flaky, buttery layers that melt in your mouth.</p>
+						<div class="price-row"><span>$2.50</span><a href="#contact" class="btn btn-ghost">Order</a></div>
+					</div>
+				</article>
+				<article class="card">
+					<img src="https://images.unsplash.com/photo-1599785209796-9e78a4368d45?q=80&w=1200&auto=format&fit=crop" alt="Cupcakes" />
+					<div class="card-body">
+						<h3>Assorted Cupcakes</h3>
+						<p>Vanilla bean, chocolate ganache, and red velvet with cream cheese.</p>
+						<div class="price-row"><span>$3.00</span><a href="#contact" class="btn btn-ghost">Order</a></div>
+					</div>
+				</article>
+				<article class="card">
+					<img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=1200&auto=format&fit=crop" alt="Custom Cake" />
+					<div class="card-body">
+						<h3>Custom Cakes</h3>
+						<p>Designed to perfection for birthdays, weddings, and celebrations.</p>
+						<div class="price-row"><span>From $40</span><a href="#contact" class="btn btn-ghost">Order</a></div>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<section id="about" class="section">
+			<div class="container about">
+				<div class="about-text">
+					<h2>About Our Bakery</h2>
+					<p>Founded by a family of passionate bakers, Sweet Crumbs brings traditional methods and premium ingredients together. We knead, proof, and bake everything on-site each morning.</p>
+					<ul class="features">
+						<li>Organic, locally-sourced flour</li>
+						<li>Free-range eggs and real butter</li>
+						<li>Seasonal flavors all year round</li>
+					</ul>
+				</div>
+				<div class="about-media">
+					<div class="about-photo" aria-hidden="true"></div>
+				</div>
+			</div>
+		</section>
+
+		<section id="gallery" class="section container">
+			<header class="section-header">
+				<h2>Gallery</h2>
+				<p>A peek into our oven-fresh world.</p>
+			</header>
+			<div class="masonry">
+				<img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop" alt="Bread" />
+				<img src="https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?q=80&w=1200&auto=format&fit=crop" alt="Pastry" />
+				<img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1200&auto=format&fit=crop" alt="Coffee" />
+				<img src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?q=80&w=1200&auto=format&fit=crop" alt="Cake" />
+				<img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=1200&auto=format&fit=crop" alt="Cookies" />
+			</div>
+		</section>
+
+		<section id="testimonials" class="section">
+			<div class="container">
+				<header class="section-header">
+					<h2>What Customers Say</h2>
+					<p>Stories that sweeten our day.</p>
+				</header>
+				<div class="testimonials">
+					<blockquote>
+						<p>“The croissants are a dream. Easily the best in town.”</p>
+						<cite>— Maya P.</cite>
+					</blockquote>
+					<blockquote>
+						<p>“Custom cake looked stunning and tasted even better!”</p>
+						<cite>— Liam G.</cite>
+					</blockquote>
+					<blockquote>
+						<p>“Warm bread aroma every morning is irresistible.”</p>
+						<cite>— Nia R.</cite>
+					</blockquote>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" class="section contact">
+			<div class="container contact-grid">
+				<div class="contact-info">
+					<h2>Contact Us</h2>
+					<p>Pre-orders, custom cakes, catering—say hello!</p>
+					<ul>
+						<li><strong>Address:</strong> 123 Baker Street, Sweet City</li>
+						<li><strong>Phone:</strong> (555) 123-4567</li>
+						<li><strong>Email:</strong> hello@sweetcrumbs.com</li>
+						<li><strong>Hours:</strong> Mon–Sat 7:00–18:00</li>
+					</ul>
+				</div>
+				<form class="contact-form" action="#" method="post" onsubmit="return false;">
+					<label>
+						<span>Name</span>
+						<input type="text" placeholder="Jane Doe" required />
+					</label>
+					<label>
+						<span>Email</span>
+						<input type="email" placeholder="jane@example.com" required />
+					</label>
+					<label>
+						<span>Message</span>
+						<textarea rows="4" placeholder="Tell us about your order..." required></textarea>
+					</label>
+					<button class="btn btn-primary" type="submit">Send Message</button>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container footer-grid">
+			<div>
+				<a href="#" class="logo">Sweet<span>Crumbs</span></a>
+				<p>Your neighborhood bakery since 2012.</p>
+			</div>
+			<nav>
+				<h4>Explore</h4>
+				<ul>
+					<li><a href="#menu">Menu</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#gallery">Gallery</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+			<div>
+				<h4>Follow</h4>
+				<ul class="social">
+					<li><a href="#" aria-label="Instagram">&#x1F4F7;</a></li>
+					<li><a href="#" aria-label="Facebook">&#x1F4F1;</a></li>
+					<li><a href="#" aria-label="Twitter">&#x1F426;</a></li>
+				</ul>
+			</div>
+		</div>
+		<p class="copyright">© 2025 Sweet Crumbs Bakery. All rights reserved.</p>
+	</footer>
+
+</body>
+</html>
