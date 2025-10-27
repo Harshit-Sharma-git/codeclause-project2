@@ -1,49 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Fitness Tracker Dashboard</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sweet Crumb Bakery — artisan breads, pastries, and coffee baked fresh daily.">
+  <title>Sweet Crumb Bakery — Artisan Breads, Pastries & Coffee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+  <a class="skip-to-content" href="#main">Skip to content</a>
 
-  <header>
-    <h1>🏋 Fitness Tracker Dashboard</h1>
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="#home" aria-label="Sweet Crumb Bakery home">
+        <span class="logo__icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+            <path d="M5 13c0-4.5 3.5-8 7.5-8S20 8.5 20 13c0 3.9-3.1 7-7 7H9c-2.2 0-4-1.8-4-4v-3z" fill="#B86B77"/>
+            <path d="M7 13c0 1.7 1.3 3 3 3h3c2.2 0 4-1.8 4-4 0-3.3-2.7-6-6-6" stroke="#4A3B36" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo__text">Sweet Crumb</span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+      <label class="nav-toggle-btn" for="nav-toggle" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn--primary nav__cta">Order Now</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <!-- Activity Input Form -->
-    <section class="form-section">
-      <h2>Log Your Activity</h2>
-      <form id="activityForm">
-        <label>Activity:
-          <select id="activityType">
-            <option value="Running">Running</option>
-            <option value="Cycling">Cycling</option>
-            <option value="Walking">Walking</option>
-          </select>
-        </label>
-        <label>Duration (mins): <input type="number" id="duration" required /></label>
-        <label>Distance (km): <input type="number" id="distance" required /></label>
-        <button type="submit">Add Activity</button>
-      </form>
+  <main id="main">
+    <section id="home" class="hero" aria-label="Hero">
+      <div class="container hero__content">
+        <p class="eyebrow">Since 1998 • Handmade Daily</p>
+        <h1>Artisan breads, buttered to perfection</h1>
+        <p class="lead">Small-batch pastries, long-fermented sourdough, and seasonal cakes baked fresh every morning.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#menu">View Menu</a>
+          <a class="btn btn--ghost" href="#contact">Visit Us</a>
+        </div>
+        <ul class="hero__stats" aria-label="Highlights">
+          <li><strong>25+</strong><span>years baking</span></li>
+          <li><strong>100%</strong><span>scratch-made</span></li>
+          <li><strong>4.9★</strong><span>local favorite</span></li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Stats -->
-    <section class="stats-section">
-      <h2>Statistics</h2>
-      <p>Total Distance: <span id="totalDistance">0</span> km</p>
-      <p>Total Duration: <span id="totalDuration">0</span> mins</p>
-      <p>Total Calories Burned: <span id="totalCalories">0</span> kcal</p>
+    <section class="features" aria-label="Our values">
+      <div class="container">
+        <ul class="feature-grid">
+          <li class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12c0-4 3-7 7-7s7 3 7 7-3 7-7 7H9a4 4 0 0 1-4-4v-3z" fill="#E8B86D"/></svg>
+            </span>
+            <h3>Daily Fresh</h3>
+            <p>Baked at dawn, sold the same day for peak flavor and texture.</p>
+          </li>
+          <li class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 15.9 7.2 18.9l.9-5.4L4.2 8.7l5.4-.8L12 3z" fill="#B86B77"/></svg>
+            </span>
+            <h3>Quality Ingredients</h3>
+            <p>Organic flour, local butter, and seasonal fruit from nearby farms.</p>
+          </li>
+          <li class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4a8 8 0 0 0-8 8v5a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-5a8 8 0 0 0-8-8z" stroke="#4A3B36" stroke-width="1.5"/><path d="M9 14a3 3 0 1 0 6 0" stroke="#B86B77" stroke-width="1.5"/></svg>
+            </span>
+            <h3>Slow Fermentation</h3>
+            <p>48-hour sourdough process for deep flavor and easy digestion.</p>
+          </li>
+          <li class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="6" width="16" height="12" rx="2" fill="#EAD3D8"/><path d="M8 10h8M8 13h6" stroke="#4A3B36" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Custom Orders</h3>
+            <p>Cakes and party platters made-to-order. 48h notice recommended.</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Recommendations -->
-    <section class="recommendations">
-      <h2>Workout Recommendation</h2>
-      <p id="recommendationText">Log some data to get suggestions!</p>
+    <section id="menu" class="menu" aria-label="Menu highlights">
+      <div class="container">
+        <div class="section__header">
+          <h2>Our Bestsellers</h2>
+          <p>House favorites baked fresh daily. Availability may vary by season.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1549931319-d92f4dd0cf9f?q=80&w=1200&auto=format&fit=crop" alt="Crusty sourdough country loaf on a wooden board">
+            <div class="product-card__body">
+              <h3>Sourdough Country Loaf</h3>
+              <p>Slow-fermented with a crackling crust and tender crumb.</p>
+              <div class="product-card__meta">
+                <span class="price">$6.50</span>
+                <span class="tag">Vegan</span>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop" alt="Golden butter croissants in a bakery tray">
+            <div class="product-card__body">
+              <h3>Butter Croissant</h3>
+              <p>Flaky, layered, and impossibly buttery. A customer favorite.</p>
+              <div class="product-card__meta">
+                <span class="price">$3.20</span>
+                <span class="tag">Classic</span>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?q=80&w=1200&auto=format&fit=crop" alt="Cinnamon rolls with icing swirl">
+            <div class="product-card__body">
+              <h3>Cinnamon Roll</h3>
+              <p>Rolled with brown sugar and cinnamon, topped with vanilla icing.</p>
+              <div class="product-card__meta">
+                <span class="price">$3.80</span>
+                <span class="tag">Best Seller</span>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1542827634-5bda0f11c39e?q=80&w=1200&auto=format&fit=crop" alt="Assorted macarons in pastel colors">
+            <div class="product-card__body">
+              <h3>Assorted Macarons</h3>
+              <p>Delicate almond cookies in rotating seasonal flavors.</p>
+              <div class="product-card__meta">
+                <span class="price">$1.90</span>
+                <span class="tag">Gluten-Free</span>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1542326237-94b1c5a538d9?q=80&w=1200&auto=format&fit=crop" alt="Chocolate cake slice with glossy ganache">
+            <div class="product-card__body">
+              <h3>Chocolate Ganache Cake</h3>
+              <p>Rich cocoa sponge layered with silky dark chocolate ganache.</p>
+              <div class="product-card__meta">
+                <span class="price">$4.50</span>
+                <span class="tag">Signature</span>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1569615387347-8e2cfc2b09f8?q=80&w=1200&auto=format&fit=crop" alt="Fruit tart topped with berries and glaze">
+            <div class="product-card__body">
+              <h3>Seasonal Fruit Tart</h3>
+              <p>Vanilla bean pastry cream, buttery crust, and fresh fruit.</p>
+              <div class="product-card__meta">
+                <span class="price">$4.20</span>
+                <span class="tag">Seasonal</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="section__footer">
+          <a class="btn btn--dark" href="#contact">See full menu & custom orders</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about" aria-label="About us">
+      <div class="container about__grid">
+        <div class="about__media">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop" alt="Baker shaping dough on a floured counter">
+        </div>
+        <div class="about__text">
+          <h2>From our oven to your table</h2>
+          <p>We are a family-run bakery dedicated to time-honored techniques and honest ingredients. Every loaf and pastry is crafted by hand and baked fresh each morning.</p>
+          <ul class="checklist">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#4A3B36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Organic flour & local butter
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#4A3B36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Seasonal, small-batch specials
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#4A3B36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Zero artificial preservatives
+            </li>
+          </ul>
+          <div class="about__numbers">
+            <div class="number">
+              <span class="num">25</span>
+              <span class="label">years baking</span>
+            </div>
+            <div class="number">
+              <span class="num">100%</span>
+              <span class="label">scratch-made</span>
+            </div>
+            <div class="number">
+              <span class="num">4.9★</span>
+              <span class="label">customer rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery" aria-label="Photo gallery">
+      <div class="container section__header">
+        <h2>Fresh from the oven</h2>
+        <p>A peek at what we have on our shelves.</p>
+      </div>
+      <div class="gallery__grid">
+        <img src="https://images.unsplash.com/photo-1464347744102-11db6282f854?q=80&w=1200&auto=format&fit=crop" alt="Artisan loaves on display">
+        <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?q=80&w=1200&auto=format&fit=crop" alt="Freshly baked baguettes">
+        <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop" alt="Pastries with powdered sugar">
+        <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=1200&auto=format&fit=crop" alt="Decorated cake with berries">
+        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1200&auto=format&fit=crop" alt="Cookies and biscuits">
+        <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1200&auto=format&fit=crop" alt="Coffee and pastry">
+      </div>
+    </section>
+
+    <section class="cta" aria-label="Pre-order">
+      <div class="container cta__inner">
+        <div class="cta__text">
+          <h2>Pre-order your favorites</h2>
+          <p>Reserve cakes, loaves, and party platters up to 3 days in advance. We’ll have them ready when you arrive.</p>
+        </div>
+        <a class="btn btn--primary btn--lg" href="#contact">Start your order</a>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" aria-label="Contact and hours">
+      <div class="container contact__grid">
+        <div class="contact__info">
+          <h2>Visit us</h2>
+          <p>123 Baker Street, Riverside, CA</p>
+          <ul class="contact__list">
+            <li><strong>Hours</strong>: Mon–Sat 7:00–18:00, Sun 8:00–14:00</li>
+            <li><strong>Phone</strong>: <a href="tel:+1234567890">(123) 456-7890</a></li>
+            <li><strong>Email</strong>: <a href="mailto:hello@sweetcrumb.example">hello@sweetcrumb.example</a></li>
+          </ul>
+
+          <form class="newsletter" action="#" method="post" aria-label="Subscribe to newsletter">
+            <label for="newsletter-email">Get weekly specials</label>
+            <div class="newsletter__controls">
+              <input id="newsletter-email" name="email" type="email" placeholder="you@example.com" required>
+              <button class="btn btn--dark" type="submit">Subscribe</button>
+            </div>
+            <small>No spam. Unsubscribe anytime.</small>
+          </form>
+        </div>
+        <div class="contact__map">
+          <div class="map-placeholder">
+            <img src="https://images.unsplash.com/photo-1533777324565-a040eb52fac1?q=80&w=1200&auto=format&fit=crop" alt="Cafe table with coffee and pastry">
+            <p><a class="map-link" href="#">Find us on Google Maps</a></p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="logo" href="#home">
+          <span class="logo__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+              <path d="M5 13c0-4.5 3.5-8 7.5-8S20 8.5 20 13c0 3.9-3.1 7-7 7H9c-2.2 0-4-1.8-4-4v-3z" fill="#B86B77"/>
+            </svg>
+          </span>
+          <span class="logo__text">Sweet Crumb</span>
+        </a>
+        <p>Crafted daily in our neighborhood bakery using time-honored techniques and honest ingredients.</p>
+        <div class="social">
+          <a class="social__link" aria-label="Instagram" href="#">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#EAD3D8" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="#EAD3D8" stroke-width="1.5"/><circle cx="17" cy="7" r="1" fill="#EAD3D8"/></svg>
+          </a>
+          <a class="social__link" aria-label="Facebook" href="#">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 9h3V6h-3a4 4 0 0 0-4 4v3H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 0 1 1-1z" fill="#EAD3D8"/></svg>
+          </a>
+          <a class="social__link" aria-label="Pinterest" href="#">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3a9 9 0 0 0-3.5 17.3c-.1-.7-.2-1.8 0-2.6.2-.7 1.3-4.6 1.3-4.6s-.3-.7-.3-1.6c0-1.5.9-2.7 2-2.7.9 0 1.4.6 1.4 1.4 0 .8-.5 2-1 3.1-.3.9.6 1.7 1.5 1.7 1.8 0 3.1-1.9 3.1-4.7 0-2.5-1.8-4.2-4.3-4.2-2.9 0-4.6 2.1-4.6 4.3 0 .8.3 1.6.8 2 .1.1.1.2.1.3-.1.3-.3 1-.4 1.1-.1.1-.2.1-.4 0-1.2-.6-1.9-2.4-1.9-3.9 0-3.1 2.3-6 6.7-6 3.5 0 6.2 2.5 6.2 5.8 0 3.4-2.1 5.9-5.1 5.9-1 0-1.9-.5-2.2-1.1l-.6 2.1c-.2.8-.9 1.7-1.3 2.2 1 .3 2 .5 3.1.5 5 0 9-3.6 9-8.7C21 6.2 17 3 12 3z" fill="#EAD3D8"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__hours">
+        <h3>Hours</h3>
+        <ul>
+          <li>Mon–Sat: 7:00–18:00</li>
+          <li>Sun: 8:00–14:00</li>
+          <li>Closed on major holidays</li>
+        </ul>
+      </div>
+
+      <div class="footer__cta">
+        <h3>Custom Cakes</h3>
+        <p>Celebrating a special day? We’ll design a cake that’s uniquely yours.</p>
+        <a class="btn btn--primary" href="#contact">Request a quote</a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© 2025 Sweet Crumb Bakery. All rights reserved.</p>
+      <p>Made with love & butter.</p>
+    </div>
+  </footer>
+
+  <noscript>Your browser has JavaScript disabled; all features on this site work without JavaScript.</noscript>
 </body>
 </html>
